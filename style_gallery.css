@@ -1,0 +1,215 @@
+* {
+    padding: 0%;
+    margin: 0%;
+  }
+  body {
+    max-width: 100%;
+    background-color: thistle;
+  }
+  
+  /* Nav Bar */
+  .nav {
+    width: 100%;
+    height: 60px;
+    background-color: #0e0d12;
+    padding-left: 10px;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 100;
+
+  }
+  .nav > .left {
+    display: flex;
+    gap: 10px;
+  }
+  .nav > .left > h3 {
+    margin-top: 20px;
+    color: rgb(153, 9, 9);
+    font-size: 26px;
+    line-height: 20px;
+  }
+  .nav > .left > h3:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 5px grey;
+  }
+  
+  .nav > .right {
+    margin: 10px 40px 10px;
+    text-align: end;
+  }
+  
+  .nav > .right > button {
+    width: 120px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: bolder;
+    font-family: cursive;
+    color: rgb(172, 13, 13);
+    background-color: #0e0d12;
+    border: 2px solid grey;
+    border-radius: 50px;
+    transition: 0.2s ease-in;
+  }
+  .nav > .right > button:hover {
+    cursor: pointer;
+    background-color: #0e0d12;
+    scale: 1.09;
+  }
+  
+  /* Side Bar */
+  .main {
+    display: flex;
+    width: 100px;
+    position: fixed;
+    margin-top: 60px;
+  }
+  .sidebar {
+    flex: 50%;
+  
+    width: 40px;
+    height: 900px;
+    background-color: #0e0d12;
+    text-align: center;
+    padding: 10px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+  i {
+    opacity: 0.9;
+    color: white;
+  }
+  i:hover {
+    opacity: 1;
+  }
+  .m:hover {
+    scale: 1.2;
+  }
+  .open {
+    flex: 50%;
+    width: fit-content;
+    height: 900px;
+    background-color: #0e0d12;
+    text-align: center;
+    padding: 10px;
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    left: -150px;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .open > h3 {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.9;
+  }
+  .open > h3:hover {
+    opacity: 1;
+  } 
+  /*------------- Gallery ------------- */
+  
+
+
+  .gallery {
+    max-width: 90%;
+    height: fit-content;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    /* background-color: yellow; */
+
+  }
+  .gallery > img {
+    width: 220px;
+    height: 300px;
+    box-shadow: 2px 2px 8px black;
+  
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+  }
+  .gallery > img:hover {
+    scale: 1.1;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px yellow;
+  }
+  .galleryh2{
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    background-color: yellow;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 5px black;
+  
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  
+  /*         --------------Footer CSS Starts Here-------------- */
+  
+  footer {
+    width: 100%;
+    height: 350px;
+    background-color: #334155;
+    font-family: sans-serif;
+  }
+  footer a {
+    text-decoration: none;
+    color: rgb(206, 199, 199);
+  }
+  footer ul li {
+    list-style: none;
+    line-height: 35px;
+    font-size: 14px;
+  }
+  footer h2 {
+    color: rgb(206, 199, 199);
+    font-size: 16px;
+  }
+  .footer_child {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .footer_child> div {
+      margin: auto;
+  }
+  
+  /*  Ending logo & Copyright */
+  
+  .footer_end {
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer_end p {
+    color: rgb(206, 199, 199);
+    text-align: end;
+    font-size: 12px;
+  }
+  
+  .footer_end i {
+    margin: 10px;
+    opacity: 0.7;
+  }
+  .footer_end i:hover {
+    opacity: 1.5;
+    cursor: pointer;
+  }
+  

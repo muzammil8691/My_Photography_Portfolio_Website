@@ -1,0 +1,517 @@
+* {
+  padding: 0%;
+  margin: 0%;
+}
+/* ___________Loader___________ */
+#loader{
+  background: #0e0d12 url(loader.gif) no-repeat center;
+  background-size: 3%;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+body {
+  max-width: 100%;
+  background-color: thistle;
+}
+
+/* Nav Bar */
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #0e0d12;
+  padding-left: 10px;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 50;
+
+}
+.nav > .left {
+  display: flex;
+  gap: 10px;
+}
+.nav > .left > h3 {
+  margin-top: 20px;
+  color: rgb(153, 9, 9);
+  font-size: 26px;
+  line-height: 20px;
+  animation: flip;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+.nav > .left > h3:hover {
+  cursor: pointer;
+  text-shadow: .2px .2px 3px grey;
+
+}
+
+.nav > .right {
+  margin: 10px 40px 10px;
+  text-align: end;
+}
+
+.nav > .right > button {
+  width: 120px;
+  height: 40px;
+  font-size: 22px;
+  font-weight: bolder;
+  font-family: cursive;
+  color: rgb(172, 13, 13);
+  background-color: #0e0d12;
+  border: 2px solid grey;
+  border-radius: 50px;
+  transition: 0.2s ease-in;
+}
+.nav > .right > button:hover {
+  cursor: pointer;
+  background-color: #0e0d12;
+  scale: 1.02;
+  animation: headShake; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+/* Side Bar */
+.main {
+  display: flex;
+  width: 100px;
+  position: fixed;
+  margin-top: 60px;
+}
+.sidebar {
+  flex: 50%;
+
+  width: 40px;
+  height: 900px;
+  background-color: #0e0d12;
+  text-align: center;
+  padding: 10px;
+  line-height: 50px;
+  cursor: pointer;
+}
+i {
+  opacity: 0.9;
+  color: white;
+}
+i:hover {
+  opacity: 1;
+}
+.m:hover {
+  scale: 1.2;
+}
+.open {
+  flex: 50%;
+  width: fit-content;
+  height: 900px;
+  background-color: #0e0d12;
+  text-align: center;
+  padding: 10px;
+  line-height: 50px;
+  cursor: pointer;
+  position: relative;
+  left: -150px;
+  transition: 0.5s ease-in-out;
+}
+
+.open > h3 {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.9;
+}
+.open > h3:hover {
+  opacity: 1;
+}
+
+/*------------- Banner -------------*/
+
+.content {
+  max-width: 100%;
+  height: auto;
+  background-color: gray;
+  padding: 20px;
+  margin-left: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Phone 1 GiF */
+
+.content > .phone1 {
+  margin-top: 70px;
+  margin-left: 150px;
+}
+.content > .phone1:hover {
+  cursor: pointer;
+}
+.content > .phone1 > h2 {
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-left: 50px;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* Phone 2 GiF */
+
+.content > .phone2 {
+  margin-top: 80px;
+  margin-left: 100px;
+}
+.content > .phone2:hover {
+  cursor: pointer;
+}
+.content > .phone2 > h2 {
+  color: aliceblue;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 2px 2px black;
+  margin-bottom: 15px;
+}
+
+/*------------- Main -------------*/
+
+main {
+  max-width: 100%;
+  height: auto;
+  background-color: gray;
+  padding: 20px;
+  padding-left: 30px;
+  margin-left: 40px;
+}
+hr {
+  height: 3px;
+  background-color: darkslategray;
+  border: none;
+  margin: 5px;
+}
+main > h2 {
+  color: rgb(226, 225, 225);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+
+/* ------------- Editable Images -------------*/
+
+.imgedit_parent {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+main > .imgedit_parent > div > img {
+  box-shadow: 0 0 10px 1px black;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+main > .imgedit_parent > div > img:hover {
+  cursor: pointer;
+}
+
+/*------------- Introduction ------------- */
+
+main > .intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  line-height: 30px;
+}
+.intro > div > img {
+  padding-left: 150px;
+  filter: drop-shadow(1px 1px 10px whitesmoke);
+}
+
+.myself {
+  text-align: center;
+}
+/* My Photo */
+.me {
+  width: 160px;
+  height: 160px;
+  border: 2px solid black;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+.me:hover {
+  box-shadow: 0 0 5px 2px lightblue;
+  cursor: pointer;
+  scale: 1.1;
+  animation: flip;
+  animation-duration: 2s;
+}
+.myself > h2 {
+  color: #990909;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 2px 2px 2px black;
+}
+
+.myself > h3 {
+  color: darkolivegreen;
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 1px 1px 1px black;
+}
+.introp {
+  padding-top: 0px;
+  color: rgb(0, 0, 0);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 1px 1px 1px whitesmoke;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 20px 50px 20px 50px;
+}
+
+/* -------------Achievements -------------*/
+
+#achievements {
+  max-width: 100%;
+  margin: auto;
+}
+#achievements > h3 {
+  background-color: yellow;
+  width: fit-content;
+  margin: auto;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 50px;
+  box-shadow: 1px 1px 5px black;
+
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* National photography Competition */
+#achievements > #national {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+#national > img {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px 10px;
+  box-shadow: 10px 10px 20px black;
+}
+#national > #img1 {
+  width: 400px;
+  height: 400px;
+}
+
+#national > #img2 {
+  width: 700px;
+  height: 400px;
+}
+
+/* Lahore Museum Exhibition */
+#achievements > #museum {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#achievements > #museum > img {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 10px 10px;
+  box-shadow: 10px 10px 20px black;
+}
+
+
+
+/*------------- Gallery ------------- */
+
+.gallery {
+  margin: 50px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 70px;
+}
+.gallery > img {
+  width: 220px;
+  height: 300px;
+  box-shadow: 2px 2px 8px black;
+
+  border-radius: 10px;
+  transition: .2s ease-in-out;
+
+}
+.gallery > img:hover {
+  scale: 1.1;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px yellow;
+}
+
+#showmore{
+  text-align: center;
+}
+#showmore>a> button{
+
+  width: fit-content;
+  height: 30px;
+  border: 0px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 18px;
+  box-shadow: 0px 0px 10px 1px black;
+  transition: .5s ease-in-out;
+
+}
+#showmore> a> button:hover{
+  cursor: pointer;
+  scale: 1.1;
+}
+
+
+
+            /*         --------------FAQ's CSS Starts Here-------------- */
+
+/* FAQ main div CSS */
+
+.faq_main{
+
+  width: 100%;
+  height: 450px;
+  background-color: #706f6f;
+  margin: 100px 0px ;
+
+    
+}
+/* FAQ Child for Grid */
+.faq_content{
+  display: grid;
+  grid-template-columns: 1fr 2fr;  
+}
+/* FAQ Grid left */
+.faq_left{
+  margin-top: 20px;
+  margin-left: 50px;
+  font-size: 16px;
+  line-height: 60px;
+  font-weight: 500;
+  color:snow;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+/* FAQ Grid right */
+.faq_right{
+  margin-top: 20px;
+  margin-right: 50px;
+  font-size: 16px;
+  line-height: 60px;
+  color:snow;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* P & H2 tag in FAQ  */
+.faq_right p{
+  margin-left: 150px;
+}
+.faq_main h2{
+  padding-top: 50px;
+  margin-left: 130px;
+  font-size: 28px;
+  line-height: 60px;
+  color:snow;
+  text-shadow: 1px 1px 5px black;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.faq_content> div> hr{
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.767);
+  border: none;
+  margin: 0px;
+}
+
+/*         --------------Footer CSS Starts Here-------------- */
+
+footer {
+  width: 100%;
+  height: 350px;
+  background-color: #334155;
+  font-family: sans-serif;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(206, 199, 199);
+}
+footer ul li {
+  list-style: none;
+  line-height: 35px;
+  font-size: 14px;
+}
+footer h2 {
+  color: rgb(206, 199, 199);
+  font-size: 16px;
+}
+.footer_child {
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.footer_child> div {
+    margin: auto;
+}
+
+/*  Ending logo & Copyright */
+
+.footer_end {
+  width: 80%;
+  margin-left: 150px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer_end p {
+  color: rgb(206, 199, 199);
+  text-align: end;
+  font-size: 12px;
+}
+
+.footer_end i {
+  margin: 10px;
+  opacity: 0.7;
+}
+.footer_end i:hover {
+  opacity: 1.5;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* Services Page */
+
+#sorry{
+
+  width: 500px;
+  height: 150px;
+  margin: auto;
+  background-color: #334155;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 10px 10px 20px black;
+}
+#sorry> h2{
+  text-align: center;
+  color: rgb(228, 226, 226);
+  margin-top: 10px;
+}
+#sorry> h1{
+  text-align: center;
+  color: rgb(228, 226, 226);
+  margin-top: 50px;
+}
