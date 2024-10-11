@@ -29,5 +29,5 @@ Acknowledgments
 This project was a great learning experience, and I am proud of the final product. I hope you enjoy exploring my portfolio as much as I enjoyed creating it. Feel free to reach out if you have any feedback or suggestions!
 
 
-LinkedIn Post: https://www.linkedin.com/posts/m-muzammil-23jun20_photography-webdesign-portfolio-activity-7236973114666942464-QkSu?utm_source=share&utm_medium=member_desktop
+LinkedIn Post: https://www.linkedin.com/posts/m-muzammil8691_photography-webdesign-portfolio-activity-7236973114666942464-QkSu?utm_source=share&utm_medium=member_desktop
 
